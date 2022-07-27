@@ -1,0 +1,46 @@
+{
+  "name": "admin-dashboard",
+  "version": "0.0.0",
+  "description": "Building Admin Dashboard using Composition API Vue3",
+  "author": "Dabiko Bleaise",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173",
+    "test:unit": "vitest --environment jsdom",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "@headlessui/vue": "^1.6.7",
+    "@heroicons/vue": "^1.0.6",
+    "@syncfusion/ej2": "^20.2.40",
+    "@syncfusion/ej2-vue-calendars": "^20.2.40",
+    "@syncfusion/ej2-vue-charts": "^20.2.40",
+    "@syncfusion/ej2-vue-dropdowns": "^20.2.40",
+    "@syncfusion/ej2-vue-grids": "^20.2.40",
+    "@syncfusion/ej2-vue-inputs": "^20.2.38",
+    "@syncfusion/ej2-vue-kanban": "^20.2.38",
+    "@syncfusion/ej2-vue-popups": "^20.2.40",
+    "@syncfusion/ej2-vue-richtexteditor": "^20.2.40",
+    "@syncfusion/ej2-vue-schedule": "^20.2.40",
+    "init": "^0.1.2",
+    "install": "^0.13.0",
+    "pinia": "^2.0.16",
+    "vue": "^3.2.37",
+    "vue-router": "^4.1.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.0.1",
+    "@vue/test-utils": "^2.0.2",
+    "autoprefixer": "^10.4.7",
+    "eslint": "^8.5.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "jsdom": "^20.0.0",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.6",
+    "vite": "^3.0.1",
+    "vitest": "^0.18.1"
+  }
+}
