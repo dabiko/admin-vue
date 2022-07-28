@@ -16,6 +16,7 @@
     "@headlessui/vue": "^1.6.7",
     "@heroicons/vue": "^1.0.6",
     "@syncfusion/ej2": "^20.2.40",
+    "@syncfusion/ej2-popups": "^20.2.40",
     "@syncfusion/ej2-vue-calendars": "^20.2.40",
     "@syncfusion/ej2-vue-charts": "^20.2.40",
     "@syncfusion/ej2-vue-dropdowns": "^20.2.40",

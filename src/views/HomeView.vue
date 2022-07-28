@@ -1,9 +1,7 @@
 <script setup>
-import WelcomeItem from '@/components/WelcomeItem.vue'
+import LeftSidebar from '../components/LeftSidebar.vue';
 </script>
 
 <template>
-  <main>
-    <WelcomeItem />
-  </main>
+    <LeftSidebar />
 </template>
