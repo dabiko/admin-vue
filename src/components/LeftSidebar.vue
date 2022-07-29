@@ -1,5 +1,6 @@
 <script setup>
-import settingsIcon from './icons/settingsIcon.vue';
+
+import SettingsIcon from './icons/settingsIcon.vue';
 //import { TooltipPlugin } from "@syncfusion/ej2-vue-popups";
 import { Navbar, Footer, Sidebar, ThemeSettings }  from  '@/components'
 import { 
@@ -13,6 +14,7 @@ import {
 const activeMenu = true;
 </script>
 
+
 <template>
     <div class="flex relative dark:bg-main-dark-bg">
         <div class="fixed right-4 bottom-4" style="zIndex:1000">
@@ -22,7 +24,7 @@ const activeMenu = true;
                 style="background: blue; borderRadius:50%"
                 class="text-3xl text-white p-3 hover:drop-shadow-xl hover:bg-light-gray"
                 >
-                    <settingsIcon />
+                    <SettingsIcon />
                 </button>
             <!-- <h1> TooltipPlugin Ends here</h1> -->
             

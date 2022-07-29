@@ -1,15 +1,21 @@
-import React from 'react';
-import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
-import { FiShoppingBag, FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
-import { BsKanban, BsBarChart, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs';
-import { BiColorFill } from 'react-icons/bi';
-import { IoMdContacts } from 'react-icons/io';
-import { RiContactsLine, RiStockLine } from 'react-icons/ri';
-import { MdOutlineSupervisorAccount } from 'react-icons/md';
-import { HiOutlineRefresh } from 'react-icons/hi';
-import { TiTick } from 'react-icons/ti';
-import { GiLouvrePyramid } from 'react-icons/gi';
-import { GrLocation } from 'react-icons/gr';
+// import React from 'react';
+// import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
+//import { FiShoppingBag, FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
+// import { BsKanban, BsBarChart, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs';
+// import { BiColorFill } from 'react-icons/bi';
+// import { IoMdContacts } from 'react-icons/io';
+// import { RiContactsLine, RiStockLine } from 'react-icons/ri';
+// import { MdOutlineSupervisorAccount } from 'react-icons/md';
+// import { HiOutlineRefresh } from 'react-icons/hi';
+// import { TiTick } from 'react-icons/ti';
+// import { GiLouvrePyramid } from 'react-icons/gi';
+// import { GrLocation } from 'react-icons/gr';
+import  { Ecommerce, Orders, Employees, Customers, 
+          Calendar, Kanban, Editor, ColorPicker, 
+          LineChart, AreaChart, BarChart, PieChart, 
+          Financial, ColorMapping, PyramidChart, StackedChart 
+        } from '@/components/icons/';
+
 import avatar from './avatar.jpg';
 import avatar2 from './avatar2.jpg';
 import avatar3 from './avatar3.png';
@@ -24,23 +30,23 @@ import product7 from './product7.jpg';
 import product8 from './product8.jpg';
 
 export const gridOrderImage = (props) => (
-  <div>
+  `<div>
     <img
       className="rounded-xl h-20 md:ml-3"
       src={props.ProductImage}
       alt="order-item"
     />
-  </div>
+  </div>`
 );
 
 export const gridOrderStatus = (props) => (
-  <button
+  `<button
     type="button"
     style={{ background: props.StatusBg }}
     className="text-white py-1 px-2 capitalize rounded-2xl text-md"
   >
     {props.Status}
-  </button>
+  </button>`
 );
 
 export const kanbanGrid = [
@@ -61,25 +67,27 @@ export const kanbanGrid = [
     keyField: 'Close',
     allowToggle: true },
 ];
+
 const gridEmployeeProfile = (props) => (
-  <div className="flex items-center gap-2">
+  `<div className="flex items-center gap-2">
     <img
       className="rounded-full w-10 h-10"
       src={props.EmployeeImage}
       alt="employee"
     />
     <p>{props.Name}</p>
-  </div>
+  </div>`
 );
 
 const gridEmployeeCountry = (props) => (
-  <div className="flex items-center justify-center gap-2">
+  `<div className="flex items-center justify-center gap-2">
     <GrLocation />
     <span>{props.Country}</span>
-  </div>
+  </div>`
 );
+
 export const EditorData = () => (
-  <div>
+  `<div>
     <h3>
       Try React
       React has been designed from the start for gradual adoption, and you can use as little or as much React as you need. Whether you want to get a taste of React, add some interactivity to a simple HTML page, or start a complex React-powered app, the links in this section will help you get started.
@@ -118,10 +126,11 @@ export const EditorData = () => (
 
       We recommend going through this JavaScript overview to check your knowledge level. It will take you between 30 minutes and an hour but you will feel more confident learning React.
     </h3>
-  </div>
+  </div>`
 );
+
 const customerGridImage = (props) => (
-  <div className="image flex gap-4">
+  `<div className="image flex gap-4">
     <img
       className="rounded-full w-10 h-10"
       src={props.CustomerImage}
@@ -131,15 +140,16 @@ const customerGridImage = (props) => (
       <p>{props.CustomerName}</p>
       <p>{props.CustomerEmail}</p>
     </div>
-  </div>
+  </div>`
 );
 
 const customerGridStatus = (props) => (
-  <div className="flex gap-2 justify-center items-center text-gray-700 capitalize">
+ `<div className="flex gap-2 justify-center items-center text-gray-700 capitalize">
     <p style={{ background: props.StatusBg }} className="rounded-full h-3 w-3" />
     <p>{props.Status}</p>
-  </div>
+  </div>`
 );
+
 export const areaPrimaryXAxis = {
   valueType: 'DateTime',
   labelFormat: 'y',
@@ -159,17 +169,20 @@ export const areaPrimaryYAxis = {
   labelStyle: { color: 'gray' },
 
 };
+
 export const barPrimaryXAxis = {
   valueType: 'Category',
   interval: 1,
   majorGridLines: { width: 0 },
 };
+
 export const barPrimaryYAxis = {
   majorGridLines: { width: 0 },
   majorTickLines: { width: 0 },
   lineStyle: { width: 0 },
   labelStyle: { color: 'transparent' },
 };
+
 const areaChartData = [
   [
     { x: new Date(2002, 0, 1), y: 2.2 },
@@ -302,6 +315,7 @@ export const barCustomSeries = [
     },
   },
 ];
+
 export const colorMappingData = [
   [
     { x: 'Jan', y: 6.96 },
@@ -475,7 +489,7 @@ export const links = [
     links: [
       {
         name: 'ecommerce',
-        icon: <FiShoppingBag />,
+        icon: Ecommerce,
       },
     ],
   },
@@ -485,15 +499,15 @@ export const links = [
     links: [
       {
         name: 'orders',
-        icon: <AiOutlineShoppingCart />,
+        icon: Orders,
       },
       {
         name: 'employees',
-        icon: <IoMdContacts />,
+        icon: Employees,
       },
       {
         name: 'customers',
-        icon: <RiContactsLine />,
+        icon: Customers,
       },
     ],
   },
@@ -502,19 +516,19 @@ export const links = [
     links: [
       {
         name: 'calendar',
-        icon: <AiOutlineCalendar />,
+        icon: Calendar,
       },
       {
         name: 'kanban',
-        icon: <BsKanban />,
+        icon: Kanban,
       },
       {
         name: 'editor',
-        icon: <FiEdit />,
+        icon: Editor,
       },
       {
         name: 'color-picker',
-        icon: <BiColorFill />,
+        icon: ColorPicker,
       },
     ],
   },
@@ -523,36 +537,36 @@ export const links = [
     links: [
       {
         name: 'line',
-        icon: <AiOutlineStock />,
+        icon: LineChart,
       },
       {
         name: 'area',
-        icon: <AiOutlineAreaChart />,
+        icon: AreaChart,
       },
 
       {
         name: 'bar',
-        icon: <AiOutlineBarChart />,
+        icon: BarChart,
       },
       {
         name: 'pie',
-        icon: <FiPieChart />,
+        icon: PieChart,
       },
       {
         name: 'financial',
-        icon: <RiStockLine />,
+        icon: Financial,
       },
       {
         name: 'color-mapping',
-        icon: <BsBarChart />,
+        icon: ColorMapping,
       },
       {
         name: 'pyramid',
-        icon: <GiLouvrePyramid />,
+        icon: PyramidChart,
       },
       {
         name: 'stacked',
-        icon: <AiOutlineBarChart />,
+        icon: StackedChart,
       },
     ],
   },
@@ -615,7 +629,7 @@ export const chatData = [
 
 export const earningData = [
   {
-    icon: <MdOutlineSupervisorAccount />,
+    icon: '<MdOutlineSupervisorAccount />',
     amount: '39,354',
     percentage: '-4%',
     title: 'Customers',
@@ -624,7 +638,7 @@ export const earningData = [
     pcColor: 'red-600',
   },
   {
-    icon: <BsBoxSeam />,
+    icon: '<BsBoxSeam />',
     amount: '4,396',
     percentage: '+23%',
     title: 'Products',
@@ -633,7 +647,7 @@ export const earningData = [
     pcColor: 'green-600',
   },
   {
-    icon: <FiBarChart />,
+    icon: '<FiBarChart />',
     amount: '423,39',
     percentage: '+38%',
     title: 'Sales',
@@ -643,7 +657,7 @@ export const earningData = [
     pcColor: 'green-600',
   },
   {
-    icon: <HiOutlineRefresh />,
+    icon: '<HiOutlineRefresh />',
     amount: '39,354',
     percentage: '-12%',
     title: 'Refunds',
@@ -655,7 +669,7 @@ export const earningData = [
 
 export const recentTransactions = [
   {
-    icon: <BsCurrencyDollar />,
+    icon: '<BsCurrencyDollar />',
     amount: '+$350',
     title: 'Paypal Transfer',
     desc: 'Money Added',
@@ -664,7 +678,7 @@ export const recentTransactions = [
     pcColor: 'green-600',
   },
   {
-    icon: <BsShield />,
+    icon: '<BsShield />',
     amount: '-$560',
     desc: 'Bill Payment',
     title: 'Wallet',
@@ -673,7 +687,7 @@ export const recentTransactions = [
     pcColor: 'red-600',
   },
   {
-    icon: <FiCreditCard />,
+    icon: '<FiCreditCard />',
     amount: '+$350',
     title: 'Credit Card',
     desc: 'Money reversed',
@@ -683,7 +697,7 @@ export const recentTransactions = [
     pcColor: 'green-600',
   },
   {
-    icon: <TiTick />,
+    icon: '<TiTick />',
     amount: '+$350',
     title: 'Bank Transfer',
     desc: 'Money Added',
@@ -693,7 +707,7 @@ export const recentTransactions = [
     pcColor: 'green-600',
   },
   {
-    icon: <BsCurrencyDollar />,
+    icon: '<BsCurrencyDollar />',
     amount: '-$50',
     percentage: '+38%',
     title: 'Refund',
@@ -706,7 +720,7 @@ export const recentTransactions = [
 
 export const weeklyStats = [
   {
-    icon: <FiShoppingCart />,
+    icon: '<FiShoppingCart />',
     amount: '-$560',
     title: 'Top Sales',
     desc: 'Johnathan Doe',
@@ -714,7 +728,7 @@ export const weeklyStats = [
     pcColor: 'red-600',
   },
   {
-    icon: <FiStar />,
+    icon: '<FiStar />',
     amount: '-$560',
     title: 'Best Seller',
     desc: 'MaterialPro Admin',
@@ -722,7 +736,7 @@ export const weeklyStats = [
     pcColor: 'red-600',
   },
   {
-    icon: <BsChatLeft />,
+    icon: '<BsChatLeft />',
     amount: '+$560',
     title: 'Most Commented',
     desc: 'Ample Admin',
@@ -848,21 +862,21 @@ export const themeColors = [
 
 export const userProfileData = [
   {
-    icon: <BsCurrencyDollar />,
+    icon: '<BsCurrencyDollar />',
     title: 'My Profile',
     desc: 'Account Settings',
     iconColor: '#03C9D7',
     iconBg: '#E5FAFB',
   },
   {
-    icon: <BsShield />,
+    icon: '<BsShield />',
     title: 'My Inbox',
     desc: 'Messages & Emails',
     iconColor: 'rgb(0, 194, 146)',
     iconBg: 'rgb(235, 250, 242)',
   },
   {
-    icon: <FiCreditCard />,
+    icon: '<FiCreditCard />',
     title: 'My Tasks',
     desc: 'To-do and Daily Tasks',
     iconColor: 'rgb(255, 244, 229)',
@@ -3069,6 +3083,7 @@ export const lineChartData = [
     { x: new Date(2011, 0, 1), y: 100 },
   ],
 ];
+
 export const dropdownData = [
   {
     Id: '1',
@@ -3082,6 +3097,7 @@ export const dropdownData = [
     Time: 'May 2021',
   },
 ];
+
 export const SparklineAreaData = [
   { x: 1, yval: 2 },
   { x: 2, yval: 6 },
@@ -5863,6 +5879,7 @@ export const financialChartData = [
     volume: 27939544,
   },
 ];
+
 export const PyramidData = [
   { x: 'Sweet Treats', y: 120, text: '120 cal' },
   { x: 'Milk, Youghnut, Cheese', y: 435, text: '435 cal' },

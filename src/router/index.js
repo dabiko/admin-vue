@@ -24,10 +24,11 @@ import StackedView from '../views/Charts/StackedView.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    
     //  dashboard 
     {
       path: '/',
-      name: 'Home Page',
+      name: 'HomePage',
       component: HomeView
     },
     {
@@ -133,7 +134,8 @@ const router = createRouter({
     //   // which is lazy-loaded when the route is visited.
     //   component: () => import('../views/NotFoundView.vue')
     // }
-  ]
+  ],
+  linkActiveClass: 'isActive',
 
 })
 
