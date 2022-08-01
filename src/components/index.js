@@ -1,3 +1,4 @@
+export { default as NavIcon } from './NavIcon.vue';
 export { default as Button } from './BottonComponent.vue';
 export { default as ThemeSettings } from './ThemeSettings.vue';
 export { default as Sidebar } from './SideBar.vue';

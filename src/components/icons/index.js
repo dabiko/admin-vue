@@ -1,3 +1,14 @@
+export { default as AppLogo } from './BoLogo.vue';
+export { default as BurgaIcon } from './BurgaMenu.svg';
+export { default as OpenMenu } from './OpenMenu.vue';
+export { default as CloseMenu } from './CloseMenu.vue';
+
+export { default as SearchIcon } from './SearchIcon.svg';
+export { default as ShoppingCart } from './ShoppingCart.svg';
+export { default as MessageIcon } from './MessageIcon.svg';
+export { default as NotifIcon } from './NotifIcon.svg';
+export { default as ArrowDownIcon } from './arrowDown.svg';
+
 export { default as Ecommerce } from './Ecommerce.svg';
 export { default as Orders } from './Orders.svg';
 export { default as Employees } from './Employees.svg';

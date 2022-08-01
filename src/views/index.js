@@ -16,3 +16,5 @@ export { default as Line } from './Charts/LineView.vue';
 export { default as Pie } from './Charts/PieView.vue';
 export { default as Pyramid } from './Charts/PyramidView.vue';
 export { default as Stacked } from './Charts/StackedView.vue';
+
+export { default as NoPageFound } from './NotFoundView.vue';

@@ -1,7 +1,7 @@
 <script setup>
-import LeftSidebar from '../components/LeftSidebar.vue';
+//import RightSidebar from '../components/RightSidebar.vue';
 </script>
 
 <template>
-    <LeftSidebar />
+   <h1>Dashbaord</h1>
 </template>

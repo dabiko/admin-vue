@@ -4,6 +4,6 @@
 
  <template>
     <div>
-        <h1>Ecommerce View</h1>
+        <h1 style="margin-left: 1000px;">Ecommerce View</h1>
     </div>
  </template>

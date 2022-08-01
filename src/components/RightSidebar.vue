@@ -1,16 +1,6 @@
 <script setup>
-
-import SettingsIcon from './icons/settingsIcon.vue';
-//import { TooltipPlugin } from "@syncfusion/ej2-vue-popups";
 import { Navbar, Footer, Sidebar, ThemeSettings }  from  '@/components'
-import { 
-    Ecommerce, Orders, Calendar, Employees, 
-    Stacked, Pyramid, Customers, Kanban, 
-    Line, Area, Bar, Pie, Financial, 
-    ColorPicker, ColorMapping, Editor 
-} from '@/views';
-
-
+import SettingsIcon from './icons/settingsIcon.vue';
 const activeMenu = true;
 </script>
 
@@ -30,8 +20,7 @@ const activeMenu = true;
             
         </div>
 
-        <div v-if="activeMenu"
-            class="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white"
+        <div v-if="activeMenu"  class="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white"
          > 
           <Sidebar />
         </div>
@@ -49,10 +38,9 @@ const activeMenu = true;
                   'dark:bg-main-dark-bg  bg-main-bg w-full min-h-screen flex-2'  :!activeMenu
                 }"
         >  
-            <!-- Navigation Bar -->
-
             <div class="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full ">
-              <Navbar />
+             
+             <Navbar />
             </div>
         </div>
 

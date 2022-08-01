@@ -1,126 +1,115 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import NotFoundView from '../views/NotFoundView.vue'
 
-import OrdersView from '../views/OrdersView.vue'
-import EmployeesView from '../views/EmployeesView.vue'
-import CustomersView from '../views/CustomersView.vue'
-
-import KanbanView from '../views/KanbanView.vue'
-import EditorView from '../views/EditorView.vue'
-import CalendarView from '../views/CalendarView.vue'
-import ColorPickerView from '../views/ColorPickerView.vue'
+import { 
+    Ecommerce, Orders, Calendar, Employees, 
+    Stacked, Pyramid, Customers, Kanban, 
+    Line, Area, Bar, Pie, Financial, 
+    ColorPicker, ColorMapping, Editor, NoPageFound
+} from '@/views';
 
 
-import LineView from '../views/Charts/LineView.vue'
-import AreaView from '../views/Charts/AreaView.vue'
-import BarView from '../views/Charts/BarView.vue'
-import PieView from '../views/Charts/PieView.vue'
-import FinancialView from '../views/Charts/FinancialView.vue'
-import ColorMappingView from '../views/Charts/ColorMapView.vue'
-import PyramidView from '../views/Charts/PyramidView.vue'
-import StackedView from '../views/Charts/StackedView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  linkActiveClass: 'active',
   routes: [
     
     //  dashboard 
     {
       path: '/',
-      name: 'HomePage',
-      component: HomeView
+      name: 'Ecommerce',
+      component: Ecommerce
     },
     {
       path: '/ecommerce',
       name: 'Ecommerce',
-      component: HomeView
+      component: Ecommerce
     },
 
    // Pages
     {
       path: '/orders',
       name: 'Orders',
-      component: OrdersView
+      component: Orders
     },
     {
       path: '/employees',
       name: 'Employees',
-      component: EmployeesView
+      component: Employees
     },
     {
       path: '/customers',
       name: 'Customers',
-      component: CustomersView
+      component: Customers
     },
 
     // apps
     {
       path: '/kanban',
       name: 'Kanban',
-      component: KanbanView
+      component: Kanban
     },
     {
       path: '/editor',
       name: 'Editor',
-      component: EditorView
+      component: Editor
     },
     {
       path: '/calendar',
       name: 'calendar',
-      component: CalendarView
+      component: Calendar
     },
     {
       path: '/color-picker',
       name: 'ColorPicker',
-      component: ColorPickerView
+      component: ColorPicker
     },
 
     // Charts
     {
       path: '/line',
       name: 'Line',
-      component: LineView
+      component: Line
     },
     {
       path: '/area',
       name: 'Area',
-      component: AreaView
+      component: Area
     },
     {
       path: '/bar',
       name: 'Bar',
-      component: BarView
+      component: Bar
     },
     {
       path: '/pie',
       name: 'Pie',
-      component: PieView
+      component: Pie
     },
     {
       path: '/financial',
       name: 'Financial',
-      component: FinancialView
+      component: Financial
     },
     {
       path: '/color-mapping',
       name: 'ColorMapping',
-      component: ColorMappingView
+      component: ColorMapping
     },
     {
       path: '/pyramid',
       name: 'Pyramid',
-      component: PyramidView
+      component: Pyramid
     },
     {
       path: '/stacked',
       name: 'Stacked',
-      component: StackedView
+      component: Stacked
     },
     {
       path: '/:catchAll(.*)',
       name: 'Not-Found',
-      component: NotFoundView,
+      component: NoPageFound,
       meta: {
         requiresAuth: false
       }
@@ -135,7 +124,8 @@ const router = createRouter({
     //   component: () => import('../views/NotFoundView.vue')
     // }
   ],
-  linkActiveClass: 'isActive',
+ 
+  //linkActiveMenu:  'isOpen',
 
 })
 
