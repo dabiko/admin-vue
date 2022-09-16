@@ -3,7 +3,7 @@ import router from '../router'
 import { RouterLink } from 'vue-router'
 import BoLogo from './icons/BoLogo.vue';
 import  CancelIcon from './icons/CancelIcon.vue'; 
-//import { TooltipPlugin } from "@syncfusion/ej2-vue-popups";
+import { TooltipComponent } from '@syncfusion/ej2-vue-popups';
 import { links } from  '../data/dummy'
 import { collapsed, toggleSidebar, sidebarWidth } from '../stores/menuState';
 import { AppLogo, CloseMenu} from '@/components/icons';
@@ -29,11 +29,11 @@ const isActive = true;
                <AppLogo @click="toggleSidebar" /> <span>QG-BO</span>
             </RouterLink>
 
-            <!-- add tooltip here -->
-            <button :class="{'rotate__icon': collapsed}" class="collapse__icon" @click="toggleSidebar">
-                <CloseMenu />
-            </button>
-            <!-- end tooltip here -->
+           <TooltipComponent content="Close" position="Right">
+                <button :class="{'rotate__icon': collapsed}" class="collapse__icon" @click="toggleSidebar">
+                    <CloseMenu />
+                </button>
+           </TooltipComponent>
         </div>
         <div class="mt-10"> 
             <div v-for="mainMenu in links" 
