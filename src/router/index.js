@@ -4,7 +4,7 @@ import {
     Ecommerce, Orders, Calendar, Employees, 
     Stacked, Pyramid, Customers, Kanban, 
     Line, Area, Bar, Pie, Financial, 
-    ColorPicker, ColorMapping, Editor, NoPageFound
+    ColorPicker, ColorMapping, Editor, NoPageFound, Syncfusion
 } from '@/views';
 
 
@@ -105,6 +105,11 @@ const router = createRouter({
       path: '/stacked',
       name: 'Stacked',
       component: Stacked
+    },
+    {
+      path: '/syncfusion',
+      name: 'Syncfusion',
+      component: Syncfusion
     },
     {
       path: '/:catchAll(.*)',

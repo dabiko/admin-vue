@@ -18,3 +18,4 @@ export { default as Pyramid } from './Charts/PyramidView.vue';
 export { default as Stacked } from './Charts/StackedView.vue';
 
 export { default as NoPageFound } from './NotFoundView.vue';
+export { default as Syncfusion } from './SyncfusionView.vue';

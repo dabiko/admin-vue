@@ -33,18 +33,16 @@ const activeMenu = true;
 
         <div 
         class="" 
-        :class="{ 
-                  'dark:bg-main-dark-bg  bg-main-bg min-h-screen md:ml-72 w-full': activeMenu , 
-                  'dark:bg-main-dark-bg  bg-main-bg w-full min-h-screen flex-2'  :!activeMenu
-                }"
+        :class="[
+                  'dark:bg-main-dark-bg  bg-main-bg w-full min-h-screen md:ml-72'? activeMenu : 
+                  'dark:bg-main-dark-bg  bg-main-bg w-full min-h-screen flex-2'
+                ]"
         >  
             <div class="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full ">
              
              <Navbar />
             </div>
         </div>
+</div>
 
-
-
-    </div>
 </template>
